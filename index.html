@@ -21,3 +21,22 @@
     </script>
 </body>
 </html>
+<h2>Jogo do Tigrinho</h2>
+<p>Escolha um número de 1 a 6 e clique no botão para ver o resultado!</p>
+<input type="number" id="tigrinhoInput" min="1" max="6" placeholder="Escolha um número (1-6)">
+<button onclick="jogarTigrinho()">Jogar Tigrinho</button>
+<p id="tigrinhoResultado"></p>
+
+<script>
+    function jogarTigrinho() {
+        const escolha = document.getElementById("tigrinhoInput").value;
+        const resultado = Math.floor(Math.random() * 6) + 1; // Número aleatório entre 1 e 6
+        const resultadoTexto = "Resultado: " + resultado;
+
+        if (escolha == resultado) {
+            document.getElementById("tigrinhoResultado").textContent = resultadoTexto + " - Você ganhou!";
+        } else {
+            document.getElementById("tigrinhoResultado").textContent = resultadoTexto + " - Você perdeu!";
+        }
+    }
+</script>
