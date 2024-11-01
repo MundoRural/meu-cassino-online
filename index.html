@@ -1,1 +1,23 @@
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cassino Online Gratuito</title>
+</head>
+<body>
+    <h1>Bem-vindo ao Cassino Online!</h1>
+    <p>Experimente nossa roleta online gratuita:</p>
+    
+    <button onclick="spin()">Girar a Roleta</button>
+    <p id="result"></p>
+    
+    <script>
+        function spin() {
+            const outcomes = ["Vermelho", "Preto", "Verde"];
+            const result = outcomes[Math.floor(Math.random() * outcomes.length)];
+            document.getElementById("result").textContent = "Resultado: " + result;
+        }
+    </script>
+</body>
+</html>
